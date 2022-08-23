@@ -9,7 +9,8 @@ public:
             rows[i][i] = 1;
             for (int j=1;j<i;j++)
             {
-                rows[i][j]=rows[i-1][j-1]+rows[i-1][j];
+                rows[i][j]=rows[i-1][j-1];
+                rows[i][j]=rows[i][j]+rows[i-1][j];
             }
         }
             return rows;
