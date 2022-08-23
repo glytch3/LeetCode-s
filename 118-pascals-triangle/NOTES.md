@@ -19,4 +19,10 @@ TYPE 3: If asked to print **only a particular row** → nCr takes 0(N*N) → but
 
 ex : 1 4 6 4 1
 
+for (int i = 0; i < k; ++i) 
+{
+res * = (n - i);
+res /= (i + 1);
+}
+
 Basically we are using the shortcut trick to find nCr
