@@ -13,7 +13,7 @@ TYPE 1:
 
 TYPE 2: Print an element at **Row r and Cloumn c**
 
-(r-1) **C** (c-1)   →   For every element 
+(r-1) **C** (c-1)   
 
 TYPE 3: If asked to print **only a particular row** → nCr takes 0(N*N) → but we can do it in 0(N) using
 
