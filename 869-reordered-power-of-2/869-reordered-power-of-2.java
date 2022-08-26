@@ -8,7 +8,8 @@ class Solution {
             {
                 return true;
             }
-            num=num<<1;
+            //num=num<<1;
+            num=num*2;
         }
         return false;
     }
