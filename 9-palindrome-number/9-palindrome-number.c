@@ -1,19 +1,20 @@
 
 
 bool isPalindrome(int x){
-     /*   long b=0,a=x;
         if(x<0)
             return false;
-        
-        while(a>0)
+        long a=0;
+        long b=x;
+        while(b>0)
         {
-            b=b*10+a%10;
-            a=a/10;
+            a=(a*10)+(b%10);
+            b/=10;
         }
         
-        return (b==a);
+        return (a==x);
     
-    */
+     /*   
+    
     
     if (x < 0) return false;
     long y=0;
@@ -23,5 +24,5 @@ bool isPalindrome(int x){
         xx/=10;
     }
     return (y == x);
-
+*/
 }
