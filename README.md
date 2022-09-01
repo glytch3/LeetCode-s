@@ -1,4 +1,4 @@
 # LeetCode's
-Collection of LeetCode questions that u have solved 😳
+Collection of LeetCode questions that i have solved 😳
 
 
