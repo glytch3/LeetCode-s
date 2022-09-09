@@ -12,7 +12,8 @@ public:
         }
         return count;
     }*/ //Time exceeded
-          sort(begin(properties), end(properties),
+    
+      sort(begin(properties), end(properties),
              [](const auto& a, const auto& b) {
                  return a[0] == b[0] ? a[1] > b[1] : a[0] < b[0];
              });
