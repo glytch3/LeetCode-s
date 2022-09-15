@@ -2,15 +2,14 @@ class Solution {
 public:
     vector<int> findOriginalArray(vector<int>& changed) {
         /*vector<int> res={};
-        vector<int> f={};
         if(changed.size()%2==1)
-            return f;
+            return {};
         int half=changed.size()/2;
         sort(changed.begin(), changed.end());
         for(int i=0;i<changed.size()/2;i++)
         {
-            if(changed[i]*2!=changed[i+half])
-                return f;
+            //if(changed[i]*2!=changed[i+half])
+                //return {};
             res.push_back(changed[i]);
         }
         return res;*/
