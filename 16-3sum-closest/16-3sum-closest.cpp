@@ -18,8 +18,8 @@ public:
         }
         */
             
-    int diff = INT_MAX;
-    int ans = 0;
+    int diff = INT_MAX; 
+    int ans = 0; //final sum of three
     sort(nums.begin(), nums.end());
 
     if(nums.size() < 3) return ans;
