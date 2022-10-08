@@ -4,11 +4,12 @@ public:
         sort(nums.begin(),nums.end());
         int diff,p=0,pp,init,begin,end,sum,old=INT_MAX,ans=0;
         int cmp=INT_MAX;
-        for(int x=0;x<nums.size();x++)
+        for(int x=0;x<nums.size();x++) //SET FIRST NUMBER
         {
-            init=p;
-            begin=p+1;
+            init=x;
+            begin=x+1;
             end=nums.size()-1;
+            //JUST TRY ALL POSSIBLE LOGICAL COMBINATIONS USING THE FIRST NUMBER
             while(begin<end)
             {
                 sum=nums[init]+nums[begin]+nums[end];
@@ -25,7 +26,6 @@ public:
                 if(sum>target)
                 end--;
             }
-            p++;
         }
     return ans;
     }
