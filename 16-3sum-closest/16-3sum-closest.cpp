@@ -1,24 +1,59 @@
 class Solution {
 public:
     int threeSumClosest(vector<int>& nums, int target) {
-        /*
         sort(nums.begin(),nums.end());
-        int *p=nums;
-        int *pp=nums++;
-        int *ppp=nums.end();
+        int diff,p=0,pp,init,begin,end,sum,old=INT_MAX,ans=0;
+        
+        if(nums.size() < 3) return ans;
+
         int cmp=INT_MAX;
         for(int x=0;x<nums.size();x++)
         {
-            
-            for(int y=0;y<nums.size();y++)
+            init=p;
+            begin=p+1;
+            end=nums.size()-1;
+            while(begin<end)
             {
-                
+                sum=nums[init]+nums[begin]+nums[end];
+                if(sum==target)
+                    return target;
+                diff=abs(sum-target);
+                if(diff<old)
+                {
+                    ans=sum;
+                    old=diff;
+                }
+                if(sum<target)
+                begin++;
+                if(sum>target)
+                end--;
             }
             p++;
         }
-        */
+    return ans;
+    }
+};      
             
-    int diff = INT_MAX; 
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+    /*int diff = INT_MAX; 
     int ans = 0; //final sum of three
     sort(nums.begin(), nums.end());
 
@@ -41,5 +76,4 @@ public:
         first++;
     }
     return ans;
-    }
-};
+    */
