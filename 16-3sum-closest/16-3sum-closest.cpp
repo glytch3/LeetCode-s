@@ -26,8 +26,8 @@ public:
                 if(sum>target)
                 end--;
             }
-            while(x < nums.size()-1 && nums[x+1] == nums[x])
-        x++;
+            while(x < nums.size()-1 && nums[x+1] == nums[x]) //IF THE NUMBERS ARE SAME THEN SKIP THE COMBINATION CHECK FOR SECOND AS WE HAVE ALREADY CHECKED ONCE
+            x++;
         }
     return ans;
     }
