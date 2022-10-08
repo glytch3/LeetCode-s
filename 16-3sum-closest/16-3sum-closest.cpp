@@ -26,6 +26,8 @@ public:
                 if(sum>target)
                 end--;
             }
+            while(x < nums.size()-1 && nums[x+1] == nums[x])
+        x++;
         }
     return ans;
     }
