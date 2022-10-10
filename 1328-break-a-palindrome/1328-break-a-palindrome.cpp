@@ -8,7 +8,7 @@ public:
         for(int i = 0; i < n; i++) {
             int j = n - 1 - i;
             if(i == j) {
-                continue;
+                continue; //break loop
             }
             if(s[i] != 'a') {
                 s[i] = 'a';
@@ -19,3 +19,10 @@ public:
         return s;
     }
 };
+
+
+//in any given palindrome , traverse from left to right and then make first non 'a' character to a, thus resulting in lexicographically smallest one possible
+//abba -> aaba
+
+//if all alpabets is 'a'
+//aaaa -> not baaa -> 'aaab' is the correct answer
