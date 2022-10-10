@@ -15,7 +15,7 @@ public:
                 return s;
             }
         }
-        s[n-1] = 'b';
+        s[n-1] = 'b'; //all characters in the string are 'a'
         return s;
     }
 };
