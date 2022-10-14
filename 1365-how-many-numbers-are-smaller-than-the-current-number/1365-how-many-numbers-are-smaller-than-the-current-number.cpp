@@ -11,7 +11,6 @@ public:
     
     void find(int j,vector<int>& nums,vector<int>& result)
     {
-        int n=nums[j];
         int res=0;
         for(int i=0;i<nums.size();i++)
         {
