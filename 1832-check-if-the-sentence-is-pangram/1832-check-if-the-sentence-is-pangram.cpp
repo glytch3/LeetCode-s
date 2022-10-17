@@ -4,9 +4,10 @@ public:
         sort(sentence.begin(),sentence.end());
         string a="abcdefghijklmnopqrstuvwxyz";
         int p=0;
-        if(sentence.size()<26)
+        int s=sentence.size();
+        if(s<26)
             return false;
-        for(int i=0;i<sentence.size();i++)
+        for(int i=0;i<s;i++)
         {
             if(sentence[i]==a[p])
                 p++;
