@@ -10,6 +10,8 @@ public:
         {
             if(sentence[i]==a[p])
                 p++;
+            if(sentence.size()-i<26-p)
+                return false;
         }
         if(p==26)
             return true;
