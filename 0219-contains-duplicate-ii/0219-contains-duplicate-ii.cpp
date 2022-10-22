@@ -12,7 +12,7 @@ public:
            if (s.find(nums[i]) != s.end()) return true;
            s.insert(nums[i]);
        }
-       
+
        return false;
     }
 };
