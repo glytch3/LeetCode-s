@@ -13,7 +13,7 @@ public:
         for(auto a:operations)
         {
             if (a[1]=='+')
-            x++;
+            ++x;
             else
             x--;  
         }
