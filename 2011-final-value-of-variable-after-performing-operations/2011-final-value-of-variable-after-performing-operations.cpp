@@ -5,9 +5,9 @@ public:
         for(auto a:operations)
         {
             if (a[1]=='+')
-            x=x+1;
+            x++;
             else
-            x=x-1;  
+            x--;  
         }
         return x;
     }
