@@ -11,8 +11,7 @@ public:
     
     int binarySearch(vector<int>& nums, int l, int r, int x)
     {
-    if(nums[0]==x)
-        return 0;
+    
     if (r >= l) {
         int mid = l + (r - l) / 2;
         if (nums[mid] == x)
