@@ -2,6 +2,8 @@ class Solution {
 public:
     int search(vector<int>& nums, int target) {
         int n = nums.size();
+        if(nums[0]==target)
+        return 0;
         int result = binarySearch(nums, 0, n - 1, target);
         if(result>-1)
             return result;
