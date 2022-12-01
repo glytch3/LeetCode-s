@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
 public:
     bool halvesAreAlike(string s) {
         string first="";
@@ -26,5 +26,30 @@ public:
                 res++;
         }
         return res;
+    }
+};*/
+
+class Solution {
+public:
+    bool halvesAreAlike(string s) {
+        int res1=0,res2=0;
+        int n=s.size();
+        int i;
+        char c;
+        for(i=0;i<n/2;i++)
+        {   
+            c=s[i];
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U')
+            res1++;
+        }
+        for(i=n/2;i<n;i++)
+        {   
+            c=s[i];
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U')                
+            res2++;
+        }
+        if(res1==res2)
+            return true;
+        return false;
     }
 };
