@@ -32,7 +32,6 @@ class Solution {
     int minDiff = INT_MAX;
     long prefix = 0;
     long suffix = accumulate(begin(nums), end(nums), 0L);
-
     for (int i = 0; i < n; ++i) {
       prefix += nums[i];
       suffix -= nums[i];
@@ -44,7 +43,6 @@ class Solution {
         minDiff = diff;
       }
     }
-
     return ans;
   }
 };
