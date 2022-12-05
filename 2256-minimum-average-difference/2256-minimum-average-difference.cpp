@@ -33,7 +33,7 @@ class Solution {
     long prefix = 0;
     long suffix = accumulate(begin(nums), end(nums), 0L);
 
-    for (int i = 0; i < nums.size(); ++i) {
+    for (int i = 0; i < n; ++i) {
       prefix += nums[i];
       suffix -= nums[i];
       const int prefixAvg = prefix / (i + 1);
