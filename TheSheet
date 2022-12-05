@@ -1,0 +1,2 @@
+Add numbers in a vector
+  accumulate(begin(nums), end(nums), 0L);
