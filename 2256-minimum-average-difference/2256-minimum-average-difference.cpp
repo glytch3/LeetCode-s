@@ -1,3 +1,28 @@
+/* WTAF
+class Solution {
+public:
+    int minimumAverageDifference(vector<int>& nums) {
+        float first=0;//
+        float second=accumulate(begin(nums), end(nums), 0L);//
+        int n=nums.size();//
+        int mindiff=INT_MAX;//
+        int ans=0;//
+        for(int i=0;i<nums.size();++i)
+        {
+            first=first+nums[i];
+            second=second-nums[i];
+            const int firstavg = first / (i+1);
+            const int secondavg = (i == n - 1) ? 0 : second / (n - i - 1);
+            const int diff = abs(firstavg - secondavg);
+            if(diff<mindiff){
+                ans=i;
+                mindiff = diff;
+            }
+        }
+        return ans;
+    }
+};
+*/
 
 class Solution {
  public:
@@ -25,35 +50,7 @@ class Solution {
 };
 
 
-/*
-class Solution {
-public:
-    int minimumAverageDifference(vector<int>& nums) {
-        float first=0;
-        float second=accumulate(begin(nums), end(nums), 0L);
-        int n=nums.size();
-        int mindiff=INT_MAX;
-        int ans=0;
-        for(int i=0;i<n;i++)
-        {
-            first=first+nums[i];
-            second=second-nums[i];
-            int firstavg=first/(i+1);
-            int secavg= (i == n - 1) ? 0 : second / (n - i - 1);
-            int diff=abs(firstavg-secavg);
-            if(diff<mindiff){
-                ans=i;
-                mindiff=diff;
-            }
-        }
-        return ans;
-    }
-};
-*/
-
-
 /* Time Limit Error + Interger 0verflow
-
 class Solution {
 public:
     int minimumAverageDifference(vector<int>& nums) {
