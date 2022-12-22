@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<int>> flipAndInvertImage(vector<vector<int>>& image) {
-    int n = image.size();
+    const int n = image.size();
     for (int i = 0; i < n; ++i)
       for (int j = 0; j < (n + 1) / 2; ++j) {
         const int temp = image[i][j];
