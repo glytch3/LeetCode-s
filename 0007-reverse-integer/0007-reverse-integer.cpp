@@ -12,3 +12,5 @@ public:
         return ans;
     }
 };
+
+//signed 32-bit integer range [-231, 231 - 1] -> range of INT variable
