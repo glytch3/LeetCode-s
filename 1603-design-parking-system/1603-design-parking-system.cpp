@@ -6,9 +6,10 @@ public:
     }
     
     bool addCar(int carType) {
-        if(count[carType-1]--<=0)
-            return false;
-        return true;
+        // if(count[carType-1]--<=0)
+        //     return false;
+        // return true;
+        return count[carType-1]-->0;
     }
 };
 
