@@ -13,14 +13,14 @@ public:
         return ans;
     }
     
-    int findtotalpotion(long long spell,vector<int>& potions,long long success,int m)
+    int findtotalpotion(long spell,vector<int>& potions,long long success,int m)
     {
         int low=0;
         int high=m;
         while(low<high)
         {
             int mid=(low+high)/2;
-            if((potions[mid]*(spell)>=success))
+            if(potions[mid]*(spell)>=success)
             {
                 high=mid;
             }
