@@ -1,30 +1,32 @@
 class Solution {
- public:
-  vector<int> successfulPairs(vector<int>& spells, vector<int>& potions,
-                              long long success) {
-    vector<int> ans;
-    sort(begin(potions), end(potions));
-
-    for (const int spell : spells)
-      ans.push_back(potions.size() -
-                    firstIndexSuccess(spell, potions, success));
-
-    return ans;
-  }
-
- private:
-  // First index i s.t. spell * potions[i] >= success
-  int firstIndexSuccess(int spell, const vector<int>& potions,
-                        long long success) {
-    int l = 0;
-    int r = potions.size();
-    while (l < r) {
-      const int m = (l + r) / 2;
-      if (static_cast<long long>(spell) * potions[m] >= success)
-        r = m;
-      else
-        l = m + 1;
+public:
+    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
+        sort(begin(potions), end(potions));
+        int n=spells.size();
+        int m=potions.size();
+        vector<int> ans;
+        int total=0;
+        for(int i=0;i<n;i++)
+        {
+            ans.push_back(findtotalpotion(spells[i],potions,success,m));
+        }
+        return ans;
     }
-    return l;
-  }
+    
+    int findtotalpotion(long long spell,vector<int>& potions,long long success,int m)
+    {
+        int low=0;
+        int high=m;
+        while(low<high)
+        {
+            int mid=(low+high)/2;
+            if(static_cast<long long>(potions[mid]*(spell)>=success))
+            {
+                high=mid;
+            }
+            else
+                low=mid+1;
+        }
+        return m-low;
+    }
 };
