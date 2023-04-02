@@ -20,7 +20,7 @@ public:
         while(low<high)
         {
             int mid=(low+high)/2;
-            if(static_cast<long long>(potions[mid]*(spell)>=success))
+            if((potions[mid]*(spell)>=success))
             {
                 high=mid;
             }
