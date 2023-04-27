@@ -3,13 +3,14 @@ public:
     int nthMagicalNumber(int n, int a, int b) {
         constexpr int kMod = 1'000'000'007;
         const long lcm = std::lcm(a, b);
-        long nn = n;
+        // long nn = n;
         long l = min(a, b);
-        long r = min(a, b) * nn;
+        long r = min(a, b) * static_cast<long>(n);
+        // long r = min(a, b) * nn;
 
         while (l < r) {
           const long long m = (l + r) / 2;
-          if (m / a + m / b - m / lcm >= nn)
+          if (m / a + m / b - m / lcm >= n)
             r = m;
           else
             l = m + 1;
