@@ -9,10 +9,6 @@ public:
             if(x<0)
                 ans++;
         }
-        ans=ans%2;
-        if(ans==0)
-            return 1;
-        else
-            return -1;
+         return ans % 2 == 0 ? 1 : -1;
     }
 };
