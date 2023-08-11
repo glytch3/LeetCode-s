@@ -6,6 +6,8 @@ public:
             return 0;
         if(n<=2)
             return 1;
+        if(dp[n]!=-1)
+            return dp[n];
         return dp[n]=fun(n-1,dp)+fun(n-2,dp);
     }
     int fib(int n) {
