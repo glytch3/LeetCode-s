@@ -10,8 +10,8 @@ public:
         return dp[n] = min(a, b) + cost[n];
     }
     int minCostClimbingStairs(vector<int>& cost) {
-        int n=cost.size();
+        int n=cost.size()-1;
         vector<int> dp(n+1,-1);
-        return min(fun(n-1,dp,cost),fun(n-2,dp,cost));
+        return min(fun(n,dp,cost),fun(n-1,dp,cost));
     }
 };
