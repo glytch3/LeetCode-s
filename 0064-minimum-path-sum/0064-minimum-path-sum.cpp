@@ -19,7 +19,7 @@ public:
     int minPathSum(vector<vector<int>>& grid) {
         int x=grid.size();
         int y=grid[0].size();
-        vector<vector<int>> dp(x,vector<int> (y,-1));
+        vector<vector<int>> dp(x,vector<int>(y,-1));
         return f(x-1,y-1,grid,dp);
     }
 };
