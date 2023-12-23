@@ -20,8 +20,8 @@ public:
                 break;
         }
         string pos = to_string(x) + "," + to_string(y);
-        if (vis.count(pos) > 0) {
-            return true; // Path crosses itself
+        if(vis.count(pos)>0) {
+            return true; 
         }
         vis.insert(pos);
     }
