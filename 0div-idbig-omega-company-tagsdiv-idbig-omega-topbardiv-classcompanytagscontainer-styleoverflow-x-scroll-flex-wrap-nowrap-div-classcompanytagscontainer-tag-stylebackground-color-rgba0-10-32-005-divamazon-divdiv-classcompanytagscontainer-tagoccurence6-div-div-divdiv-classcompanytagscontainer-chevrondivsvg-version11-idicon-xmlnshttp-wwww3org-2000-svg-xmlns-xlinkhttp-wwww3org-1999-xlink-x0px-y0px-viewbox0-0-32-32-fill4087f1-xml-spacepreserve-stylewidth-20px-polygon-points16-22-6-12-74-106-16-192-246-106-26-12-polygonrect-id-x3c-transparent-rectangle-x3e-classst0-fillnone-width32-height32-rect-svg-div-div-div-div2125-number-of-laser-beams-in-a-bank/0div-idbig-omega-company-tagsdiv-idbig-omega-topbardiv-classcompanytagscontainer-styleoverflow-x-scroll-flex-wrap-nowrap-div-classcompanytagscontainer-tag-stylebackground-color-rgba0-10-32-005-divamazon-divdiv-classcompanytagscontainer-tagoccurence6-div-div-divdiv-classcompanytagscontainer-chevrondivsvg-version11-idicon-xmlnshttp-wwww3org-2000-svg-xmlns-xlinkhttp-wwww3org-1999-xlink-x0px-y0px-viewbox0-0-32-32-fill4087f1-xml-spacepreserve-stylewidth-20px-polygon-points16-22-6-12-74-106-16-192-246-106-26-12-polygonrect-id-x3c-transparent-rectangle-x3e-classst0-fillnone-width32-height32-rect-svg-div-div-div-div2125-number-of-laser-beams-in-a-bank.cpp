@@ -4,8 +4,8 @@ public:
         int ans=0;
         int currcount=0;
         vector<int> counts;
-        if(bank.size()<=1)
-            return 0;
+        // if(bank.size()<=1)
+        //     return 0;
         for(auto x:bank)
         {
             for(auto y:x)
@@ -25,10 +25,7 @@ public:
             return 0;
         for(int i=0;i<counts.size()-1;i++)
         {
-            cout<<counts[i]<<"--"<<counts[i+1]<<"\n";
-            cout<<ans<<"\n";
             ans=ans+(counts[i]*counts[i+1]);
-            cout<<ans<<"\n";
         }
         return ans;
     }
